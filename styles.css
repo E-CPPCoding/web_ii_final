@@ -206,7 +206,7 @@ p {
     align-items: center;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
     a {
         text-decoration: none;
         color: #FFEAD3;
