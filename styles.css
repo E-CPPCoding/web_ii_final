@@ -21,7 +21,33 @@ a {
     display: block;
 }
 .card {
-    height:368px;
+    height:40rem;
+    width:32.7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    background-color: #93412B;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card .btn{
+    width: 26.1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card .text {
+    display: flex;
+    flex-direction: column;
+    width:30rem;
+    height:18rem;
+    margin-left: 1.4rem;
+    margin-right: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.desktopCards {
+    display: none;
 }
 .desktopNav {
     display: none;
@@ -33,11 +59,16 @@ a {
     display: none;
 }
 footer {
+    display: flex;
     padding-left: 33px;
     padding-right: 56px;
     padding-top: 24px;
     padding-bottom: 48px;
     background-color: #93412B;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height:309px;
 }
 footer p {
     font-family: "League Spartan", sans-serif;
@@ -46,16 +77,7 @@ footer p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     color: #FFEAD3;
-}
-.hero {
-    background: url(images/heroImage.png);
-    height: 420px;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-bottom: 40px;
 }
 h1 {
     font-family: "League Spartan", sans-serif;
@@ -96,8 +118,19 @@ h4 {
     font-weight: 400;
     font-style: normal;
     font-size: 1.7rem;
-    line-height: normal;
+    line-height: 2.21rem;
     color: #FFEAD3;
+    margin-bottom: 1rem;
+}
+.hero {
+    background: url(images/heroImage.png);
+    height: 420px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .hero .btn {
     margin: 0 auto;
@@ -152,6 +185,7 @@ p {
     width:100%;
     background-color: #93412B;
     display: flex;
+    margin-top: 35px;
     padding-top: 4rem;
     padding-bottom: 4rem;
     justify-content: center;
@@ -172,17 +206,44 @@ p {
     align-items: center;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
     a {
         text-decoration: none;
         color: #FFEAD3;
     }
+    .btn {
+        font-size: 2rem;
+        width:224px;
+    }
+    .card {
+        height:60.3rem;
+        width:46.6rem;
+    }
+    .card:nth-child(3) {
+        grid-column: span 2;
+    }
+    .card .btn{
+        width: 22.4rem;
+    }
+    .card .text {
+        width:42.7rem;
+        height:20.9rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 3.2rem;
+        margin-bottom: 3rem;
+    }
     .desktopNav {
         display: flex;
-        height: 116px;
+        height: 11.6rem;
     }
-    .mobileNav {
-        display: none;
+    .desktopNav li {
+        font-family: "League Spartan", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #FFEAD3;
     }
     .desktopNav ul {
         display: flex;
@@ -193,16 +254,8 @@ p {
         margin-right: auto;
         align-items: center;
     }
-    .desktopNav li {
-        font-family: "League Spartan", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 2rem;
-        line-height: 3rem;
-        color: #FFEAD3;
-    }
     .desktopNav ul img {
-        margin-right: 100px;
+        margin-right: 10rem;
     }
     .desktopSponsorImgs {
         display: flex;
@@ -221,43 +274,85 @@ p {
         width: 20%;
         height: 20%;
     }
+    .desktopCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    .desktopImgVendor {
+        display: block;
+    }
+    footer {
+        height: auto;
+        padding-left: 12.1rem;
+        padding-right: 12.1rem;
+        padding-top: 7.8rem;
+        padding-bottom: 10rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    footer p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    footer img {
+        display: none;
+    }
+    h1 {
+        font-size: 9.9rem;
+        line-height: 12.9rem;
+        width: 95.4rem;
+    }
+    h2 {
+        font-size: 6rem;
+        width:95.5rem;
+        margin-top: 10rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    h4 {
+        font-size: 5.4rem;
+        line-height: 7rem;
+    }
+    .hero {
+        background: url(images/heroImageDesktop.png);
+        height: 76rem;
+    }
+    .hero .btn {
+        width:22.4rem;
+    }
+    .imgs img {
+        width: 20rem;
+    }
+    .leftFooter {
+        display: contents;
+    }
+    .mobileNav {
+        display: none;
+    }
     .mobileSponsorImgs {
         display: none;
     }
     .mobileImgVendor {
         display: none;
     }
-    .desktopImgVendor {
-        display: block;
+    .mobileCards {
+        display: none;
     }
-    .hero {
-        background: url(images/heroImageDesktop.png);
-        height: 760px;
-    }
-    .hero .btn {
-        width:224px
-    }
-    h1 {
-        font-size: 99px;
-        line-height: 129px;
-        width: 954px;
-    }
-    .btn {
+    p {
         font-size: 2rem;
-        width:170px;
     }
     .vendors {
-        height:588px;
-    }
-    h2 {
-        font-size: 60px;
-        width:955px;
+        height:58.8rem;
     }
     .vendors h2 {
-        width:300px;
+        width:30rem;
+        margin-top: 0px;
     }
     .vendors .left img{
-        width: 710px;
+        width: 71rem;
     }
     .vendors .left {
         margin-right: 2%;
@@ -265,8 +360,5 @@ p {
     .vendors .right {
         margin-left: 2%;
         align-content: center;
-    }
-    .imgs img {
-        width: 200px;
     }
 }
